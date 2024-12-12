@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../images/logo.png'; // Adjust the path if your logo is in a different folder
+import logo from '../images/logo.png'; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
