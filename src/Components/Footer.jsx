@@ -3,7 +3,7 @@ import React from 'react';
 const FeaturesSection = () => {
   return (
     <>
-      <section className="bg-gray-100 py-12">
+ {/*      <section className=" py-12">
         <div className="container mx-auto text-center">
           <h2 className="text-green-600 font-semibold text-xl mb-2">Why choose us?</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
@@ -11,7 +11,6 @@ const FeaturesSection = () => {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Feature 1 */}
             <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Endless Variety</h4>
               <p className="text-gray-600">
@@ -19,7 +18,6 @@ const FeaturesSection = () => {
               </p>
             </div>
 
-            {/* Feature 2 */}
             <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Secure Shipping</h4>
               <p className="text-gray-600">
@@ -27,7 +25,6 @@ const FeaturesSection = () => {
               </p>
             </div>
 
-            {/* Feature 3 */}
             <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Tailored Quotation</h4>
               <p className="text-gray-600">
@@ -35,7 +32,6 @@ const FeaturesSection = () => {
               </p>
             </div>
 
-            {/* Feature 4 */}
             <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Global Reach</h4>
               <p className="text-gray-600">
@@ -44,9 +40,9 @@ const FeaturesSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <footer className="bg-gradient-to-r from-black to-green-900 text-white py-8">
+      <footer className="bg-gradient-to-r from-black to-green-900 text-white py-8 mt-20">
         <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Name */}
           <div className="flex items-center mb-6 md:mb-0">
