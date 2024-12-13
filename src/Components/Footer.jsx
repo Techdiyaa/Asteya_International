@@ -6,7 +6,7 @@ const Footer = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <footer className="bg-gradient-to-r from-black via-green-900 to-green-800 text-white py-6">
+    <footer className="bg-gradient-to-r from-black via-green-900 to-green-800 text-white py-6 mt-20">
       {/* Top Section */}
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4">
         {/* Logo for larger screens */}

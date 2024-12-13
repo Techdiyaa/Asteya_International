@@ -1,7 +1,7 @@
 export default function StackCard() {
   return (
     <>
-      <div className="flex items-center justify-center w-full mt-20">
+      <div className="flex items-center justify-center w-full mt-20 container mx-auto">
         <div className="relative w-full">
           <div className="w-[97%] mx-auto h-[32rem] bg-[#F7EACC] transform transition-all rounded-3xl"></div>
           
