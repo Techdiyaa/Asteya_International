@@ -10,19 +10,19 @@ import AboutUs from "./Components/AboutUs";
 function App() {
   return (
     <>
-      <div className='bg-[#F7F9FB]'>
+      <div className=' '>
         <Navbar />
         <HeroSection />
 
         <Features />
-        <div className="pl-20 pr-20 mx-auto ">
+        <div className=" container mx-auto ">
           <OurOffering />
         </div>
 
         <div className="mt-20">
           <ExploreProducts />
         </div>
-        <div className="pl-20 pr-20">
+        <div className="container mx-auto p-2">
           <AboutUs />
         </div>
         <Footer />
