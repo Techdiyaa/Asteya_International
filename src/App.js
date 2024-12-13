@@ -10,7 +10,7 @@ import AboutUs from "./Components/AboutUs";
 function App() {
   return (
     <>
-      <div className=' '>
+      <div className=' font-outfit'>
         <Navbar />
         <HeroSection />
 
