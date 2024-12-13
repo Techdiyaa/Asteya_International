@@ -1,93 +1,112 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const FeaturesSection = () => {
+const Footer = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <>
- {/*      <section className=" py-12">
-        <div className="container mx-auto text-center">
-          <h2 className="text-green-600 font-semibold text-xl mb-2">Why choose us?</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            Wide Product Selection, Fast Global Shipping, <br /> Unmatched Customer Satisfaction :)
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Endless Variety</h4>
-              <p className="text-gray-600">
-                Shop from thousands of products across multiple categories, all in one place.
-              </p>
-            </div>
-
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Secure Shipping</h4>
-              <p className="text-gray-600">
-                Enjoy fast, reliable, and secure shipping worldwide tracking every step of the way.
-              </p>
-            </div>
-
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Tailored Quotation</h4>
-              <p className="text-gray-600">
-                Get personalised quotes based on specific products and preferences.
-              </p>
-            </div>
-
-            <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Global Reach</h4>
-              <p className="text-gray-600">
-                Get trending global products that are in trend with best shipping support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <footer className="bg-gradient-to-r from-black to-green-900 text-white py-8 mt-20">
-        <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
-          {/* Logo and Name */}
-          <div className="flex items-center mb-6 md:mb-0">
-            <img src="/logo.png" alt="Asteya International" className="w-12 h-12 mr-4" />
-            <span className="text-2xl font-bold">ASTEYA INTERNATIONAL</span>
-          </div>
-
-          {/* Navigation Links */}
-          <nav className="mb-6 md:mb-0 flex space-x-6">
-            <a href="#about" className="hover:text-green-400 transition">About us</a>
-            <a href="#products" className="hover:text-green-400 transition">Products</a>
-            <a href="#contact" className="hover:text-green-400 transition">Contact us</a>
-            <a href="#blogs" className="hover:text-green-400 transition">Blogs</a>
-          </nav>
+    <footer className="bg-gradient-to-r from-black via-green-900 to-green-800 text-white py-6">
+      {/* Top Section */}
+      <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4">
+        {/* Logo for larger screens */}
+        <div className="hidden sm:flex items-center space-x-2">
+          <img src="/logo.png" className="w-52" alt="Logo" />
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            2024 © All rights reserved by ASTEYA INTERNATIONAL
+        {/* Navigation Links for larger screens */}
+        <div className="hidden md:flex space-x-8">
+          <a href="#about" className="hover:text-green-400">
+            About us
+          </a>
+          <a href="#products" className="hover:text-green-400">
+            Products
+          </a>
+          <a href="#contact" className="hover:text-green-400">
+            Contact us
+          </a>
+          <a href="#blogs" className="hover:text-green-400">
+            Blogs
+          </a>
+        </div>
+
+        {/* Hamburger Menu for smaller screens */}
+        <div className="sm:hidden relative ml-auto">
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none flex flex-col items-center space-y-1"
+          >
+            <div className="w-6 h-1 bg-white"></div>
+            <div className="w-6 h-1 bg-white"></div>
+            <div className="w-6 h-1 bg-white"></div>
+          </button>
+
+          {menuOpen && (
+            <div className="absolute top-8 right-0 bg-green-800 rounded shadow-lg p-4">
+              <ul className="flex flex-col space-y-2 text-sm">
+                <li>
+                  <a href="#about" className="hover:text-green-400">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="#products" className="hover:text-green-400">
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-green-400">
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="#blogs" className="hover:text-green-400">
+                    Blogs
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="border-t border-gray-700 mt-4 pt-4">
+        <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-between items-center px-4 text-sm">
+          {/* Copyright Text */}
+          <p className="text-center sm:text-left mb-4 sm:mb-0">
+            &copy; 2024 All rights reserved by ASTEYA INTERNATIONAL
           </p>
-          <div className="flex space-x-6">
-            <a href="#privacy" className="text-sm text-gray-400 hover:text-green-400 transition">Privacy policy</a>
-            <a href="#terms" className="text-sm text-gray-400 hover:text-green-400 transition">Terms & Conditions</a>
+
+          {/* Privacy & Terms Links */}
+          <div className="flex space-x-8 mb-4 sm:mb-0">
+            <a href="#privacy-policy" className="hover:text-green-400">
+              Privacy policy
+            </a>
+            <a href="#terms" className="hover:text-green-400">
+              Terms & Conditions
+            </a>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#facebook" className="hover:text-green-400 transition">
-              <i className="fab fa-facebook-f"></i>
+          <div className="flex space-x-6">
+            <a href="https://facebook.com">
+              <img src="/Facebook.png" alt="Facebook" className="w-6 h-6" />
             </a>
-            <a href="#instagram" className="hover:text-green-400 transition">
-              <i className="fab fa-instagram"></i>
+            <a href="https://instagram.com">
+              <img src="/Instagram.png" alt="Instagram" className="w-6 h-6" />
             </a>
-            <a href="#linkedin" className="hover:text-green-400 transition">
-              <i className="fab fa-linkedin-in"></i>
+            <a href="https://linkedin.com">
+              <img src="/Linkedin.png" alt="LinkedIn" className="w-6 h-6" />
             </a>
-            <a href="#twitter" className="hover:text-green-400 transition">
-              <i className="fab fa-twitter"></i>
+            <a href="https://twitter.com">
+              <img src="/Twitter.png" alt="Twitter" className="w-6 h-6" />
             </a>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 
-export default FeaturesSection;
+export default Footer;
