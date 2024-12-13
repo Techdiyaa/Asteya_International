@@ -2,7 +2,7 @@ export default function ExploreProducts() {
     return (
       <>
         <div className="bg-[#39B54A1A]   mt-8 relative pb-40 ">
-          <div className="   lg:px-0 mx-auto grid xl:grid-cols-12 lg:grid-cols-12 flex grid-cols-6 ">
+          <div className="   lg:px-0 mx-auto grid xl:grid-cols-12 lg:grid-cols-12 flex md:grid-cols-12 ">
             <div className=" px-6 sm:px-12 md:px-16 lg:px-24   col-span-6 flex flex-col  justify-center  pb-6  pt-20 z-10 ">
               <div className=" ">
               <div className=" text-[#39B54A] font-bold lg:text-xl sm:text-md md:text-lg ">Products</div>
@@ -19,17 +19,17 @@ export default function ExploreProducts() {
               </div>
             </div>
   
-            <div className=" flex justify-end items-center relative hidden xl:col-span-6 lg:col-span-6 xl:flex lg:flex">
+            <div className=" flex justify-end relative hidden md:col-span-6 md:flex xl:col-span-6 lg:col-span-6 xl:flex lg:flex">
              
               <img
                 src="curve.png"
                 alt="Curve"
-                className=" object-contain relative "
+                className="  relative "
               >
 
                
               </img>
-              <div className='flex absolute  xl:pr-20 lg:pr-20'>
+              <div className='flex absolute  xl:pr-20 lg:pr-20 '>
               <img src='products.png'>
               </img>
               </div>

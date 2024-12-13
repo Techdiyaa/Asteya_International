@@ -1,11 +1,12 @@
 export default function AboutUs() {
     return (
       <>
-        <div className="grid grid-cols-6 items-center justify-center  xl:grid-cols-12 lg:grid-cols-12 xl:grid lg:grid ">
+        <div className="grid grid-cols-6 items-center  justify-center md:grid  xl:grid-cols-12 lg:grid-cols-12 xl:grid lg:grid  ">
           {/* Image Section */}
-          <div className="col-span-6 hidden xl:block lg:block">
-            <img src="about.png" alt="About Us" className="  " />
-          </div>
+          <div className="col-span-6 flex justify-center items-center">
+  <img src="about.png" alt="About Us" className="max-w-full h-auto" />
+</div>
+
           
           <div className=" col-span-6   mt-20">
             <h1 className=" font-bold text-[#39B54A] lg:text-xl sm:text-md md:text-lg ">About Us</h1>
